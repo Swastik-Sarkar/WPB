@@ -1,0 +1,11 @@
+{
+  "name":"wpb",
+  "version":"1.0.0",
+  "packages":{
+                 "python":"python.org"
+             }
+  "package-python_config":[
+                             "getAdministratorWindows_DriveAccess",
+                             "getLocalTimedata"
+                          ]
+}
