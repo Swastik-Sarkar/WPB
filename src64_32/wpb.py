@@ -1,5 +1,9 @@
 import os
-import tkinter
+import tkinter as tk
+import pyglet
+from tkextrafont import Font
+
+pyglet.font.add_file('tklabelfont.ttf')
 
 class rgbx():
     def bg(code): 
@@ -13,6 +17,7 @@ class rgbx():
 
 
 app = Tk()
+applabelfont = Font(file="text_deafault.ttf", family="text_deafult")
 app.title("WPB - Windows Performance Booster")
 app.geometry('1920x800')
 appmenu = Menu(app)
@@ -20,6 +25,7 @@ item = Menu(appmenu)
 item.add_command(label='update',fg='blue',command='item_update')
 appmenu.add_cascade(label='App', appmenu=item)
 app.config(appmenu = appmenu)
+tk.Label(app, text="WPB", font=font).pack()
 app.mainloop()
 
 def item_update():
